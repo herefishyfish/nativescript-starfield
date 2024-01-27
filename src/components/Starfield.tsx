@@ -3,7 +3,7 @@ import { registerElement } from "react-nativescript";
 registerElement("Canvas", () => require("@nativescript/canvas").Canvas);
 
 export const Starfield = () => {
-  const [speed, setSpeed] = useState(20);
+  const [speed, setSpeed] = useState(10);
   const speedRef = useRef(speed);
 
   useEffect(() => {
