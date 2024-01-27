@@ -12,10 +12,10 @@ export const Starfield = () => {
 
   const initializeStarfield = (canvas) => {
     const ctx = canvas.getContext("2d");
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const width = canvas.width;
+    const height = canvas.height;
     const stars: Star[] = [];
-    const numberOfStars = 1000;
+    const numberOfStars = 3000;
 
     class Star {
       constructor() {
@@ -62,10 +62,10 @@ export const Starfield = () => {
 
     function animate() {
       ctx.clearRect(0, 0, width, height);
-      stars.forEach((star) => {
-        star.update();
-        star.show(ctx);
-      });
+      for (let i = 0; i < numberOfStars; i++) {
+        stars[i].update();
+        stars[i].show(ctx);
+      }
       requestAnimationFrame(animate);
     }
 

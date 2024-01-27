@@ -2,6 +2,13 @@ import * as React from 'react';
 import * as ReactNativeScript from 'react-nativescript';
 import '@nativescript/canvas-polyfill';
 import { Starfield } from './components/Starfield';
+import { Utils } from '@nativescript/core';
+
+declare const jp: any;
+
+if (global.isAndroid) {
+  jp.wasabeef.takt.Takt.stock(Utils.android.getApplicationContext()).seat(jp.wasabeef.takt.Seat.TOP_CENTER).color(-65536);
+}
 
 // In NativeScript, the app.ts file is the entry point to your application. You
 // can use this file to perform app-level initialization, but the primary
