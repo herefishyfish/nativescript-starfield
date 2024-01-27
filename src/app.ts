@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactNativeScript from 'react-nativescript';
 import '@nativescript/canvas-polyfill';
-import { Starfield } from './components/Canvas';
+import { Starfield } from './components/Starfield';
 
 // In NativeScript, the app.ts file is the entry point to your application. You
 // can use this file to perform app-level initialization, but the primary

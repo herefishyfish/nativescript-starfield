@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import { registerElement } from "react-nativescript";
 registerElement("Canvas", () => require("@nativescript/canvas").Canvas);
 
@@ -77,8 +77,6 @@ export const Starfield = () => {
       <canvas
         rowSpan="2"
         style={{
-          width: "100%",
-          height: "100%",
           backgroundColor: "black",
         }}
         onReady={(args) => {
